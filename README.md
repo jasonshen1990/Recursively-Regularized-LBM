@@ -6,7 +6,7 @@ Currently, methods using 3rd-order equilibrium and 3rd non-equilibrium are avail
 - Updates will be made accordingly, including the CUDA-C++ version.
 
 ## Taylor-Green vortex flow
-Taylor_Green/Vorticity.png
+![Taylor-Green vortex](Taylor_Green/Vorticity.png)
 ## Lid-driven cavity flow
 
 ## Laminar channel flow

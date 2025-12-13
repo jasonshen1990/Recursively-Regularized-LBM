@@ -6,9 +6,12 @@ Currently, methods using 3rd-order equilibrium and 3rd non-equilibrium are avail
 - Updates will be made accordingly, including the CUDA-C++ version.
 
 ## Taylor-Green vortex flow
-![TGvortex](Taylor_Green/Vorticity.png)
-Quasi two-dimensional simulation using 3D code, periodic in all the directions
+- Quasi two-dimensional simulation using 3D code, periodic in all the directions
+
+- $2\times2$ vortices
+
 <img src="Taylor_Green/Vorticity.png" alt="TGvortex" width="299"/>
+
 ## Lid-driven cavity flow
 
 ## Laminar channel flow

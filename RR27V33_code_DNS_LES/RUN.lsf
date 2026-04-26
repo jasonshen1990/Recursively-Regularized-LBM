@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#BSUB -J LBMLES_CUDA                          # Job name
+#BSUB -q 4v100-16-e5                           # Queue name
+#BSUB -n 1                                  # Number of CPU cores
+#BSUB -R "span[ptile=48]"                   # CPU cores per node
+#BSUB -gpu "num=1:mode=exclusive_process"   # Request 1 GPU in exclusive mode
+#BSUB -o LBMLES_output.%J                     # Output file
+#BSUB -e LBMLES_error.%J                      # Error file
+#BSUB -W 144:00                              # Wall clock limit (24 hours)
+
+# Load CUDA module
+module load cuda/11.8
+
+# Compile the program
+nvcc -O3 -arch=sm_70 -std=c++14 -rdc=true main.cu globals.cu initial.cu collision.cu streaming.cu macrovar.cu BC.cu output.cu LES.cu -o LBMLES
+
+# Run the program
+./LBMLES
+
+# Clean up
+rm -f *.o      # Remove any object files if they exist
+rm -f LBMLES     # Remove the executable after running (optional)

@@ -16,4 +16,7 @@ Currently, methods using 3rd-order equilibrium and 3rd non-equilibrium are avail
 
 ## Laminar channel flow
 
-## Turbulent channel flow
+## Turbulent channel flow （DNS or LES）
+In "RR27V33_code_DNS_LES/parameters.h", use 0 for DNS and 1 for LES-WALE.
+
+If you have any issues, please feel free to contact me at shenj@sustech.edu.cn.
